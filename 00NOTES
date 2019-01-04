@@ -1,0 +1,115 @@
+EPN, Tue Aug 12 14:01:57 2014
+
+01. Intro - homology search
+02. Intro - profiles
+03. Intro - HMMs and CMs
+04. Intro - Rmark
+05. QDB
+06. HMM filters
+07. 2008/2009 Then HMMs got a lot faster.
+    MSV filter slide (JSSS)
+08. Swapping out old HMM filters for new ones would make little
+    difference, since post-filtering CM dominates running time.
+09. SWITCH GEARS to SSU alignment.
+SSU ALIGNMENT
+    - HMM banding
+    - Post prob masking
+HOMOLOGY SEARCH
+    - updated Rmark
+- ? Actual results (Stadler Tedious Task of RNA homology search) Benasque ?
+
+
+----------------
+To do.
+
+-- generally reduce words (Gutell benchmark set)
+
+-- between manual and probability based masked, add one of the example
+   sequences/structures shown earlier, and show it's PPs (if you can
+   find one that has non-blue here) as an example.
+   From user guide: M21529 is a possibility
+   And possibly follow up with a PP diagram summarizing a BIG
+   alignemnt (the one used for determining archaeal masK?)
+
+
+
+
+-- Spice up second CM-HMM filter slide, to show HMM banding can be
+   used, and that new HMM filter is HMMER3. Add smaller image for HMM
+   banding at bottom. And change filtering slide.
+
+-- Spice up last two slides.
+   Infernal is foundation for a lot of RNA sequence analysis tools:
+
+   Infernal underneath Rfam, which is underneath RNACentral
+   Infernal underneath RDP
+   Infernal underneath SSU-ALIGN, which is underneath Greengenes
+   Infernal underneath EBI metagenomics portal
+   Infernal underneath ??
+   ? HMMER underneath Infernal
+   ?? Easel underneath HMMER
+   ??? Easel underneath Xfam/Pfam
+
+-- should I get rid of second slide with 100Kb, on low res displays
+   the tRNA doesn't even show up...
+
+-- last line on first text slide is awkward... Homologous genes often
+   share... Is it necessary? If so, I need to really know how to
+   deliver that line... I stumbled over it in practice.
+   
+-- fix 4 structures in struct prof info slide
+
+-- Wheres the loop slide still too wordy AND FLIP THE STRUCTURE! so
+   itn mirrors the states
+
+-- QDB highlight gamma and transition probabilities
+
+Unsure if these are necessary:
+-- make a slide comparing QDB to HMM banding, and showing that while
+   QDB restricts 1D of the matrix, HMM restricts 2.
+
+Pretty sure these are not necessary:
+-- REDO all timings for first part of talk (v1.0: QDB, HMM filters,
+   combined) consider swapping out Brown ROC slides for fig 4.4, which uses
+   Infernal 1.01 (19.0 hours instead of 50).
+
+In progress:
+-- Get non-banded timing of SSU alignment benchmark to compare to 1.1
+   banded (can I do this with 1.1? --small).
+
+
+DONE:
+-- Add Fig 1 from Genome Annotation book chapter before avgscores
+   slide, this will ease the explanation of avg scores.
+-- very awkward explaining extra complexity for CMs versus HMMs... is
+   this necessary?
+-- after blank slide -- is first slide necessary? Can I just verbally
+   mention SSU rRNA and then go into next slide?
+-- if we remove that slide, need to mention that Infernal takes 10
+   minutes to do 1 sequence.
+-- reduce text at top on masking intro slide   
+-- Remove "Goals of alignment program" from second seq2tree slide
+-- fix second seq2tree fig
+-- get rid of SSU-ALIGN tutorial line.
+-- Fix final ROC slide, nhmmer should not be orange, 1.0.2 needs to be
+   on there.
+-- Replace 'N's in tRNA qdb slide with actual sequence
+-- add Infernal 1.0 miniapp paper to before HMMER3 mention.
+-- add non-badned run time for CM alignmetn of SSU
+-- update seq counts in SSU databases
+-- fix 'by chance' in seq profile info slide.
+
+
+
+TIMINGS
+EPN, Wed Aug 13 20:14:56 2014: 47.5 minutes up to masking
+EPN, Wed Aug 13 20:24:36 2014: 56.7 minutes FIN
+Really want to get it shorter, so I don't feel like I have to
+rush. What can I remove/shorten?
+      - QDB section? remove beta slide?
+
+Went slower this time.
+EPN, Fri Aug 15 10:37:21 2014 32.25 minutes up to HMMER3
+EPN, Fri Aug 15 10:52:50 2014 46    minutes up to masking
+EPN, Fri Aug 15 11:02:53 2014 56    minutes FIN
+-----------------------------------
